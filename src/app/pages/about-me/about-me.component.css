@@ -1,0 +1,146 @@
+  @font-face {
+      font-family: GAU;
+      src: url('../../../assets/fonts/GAU_pop_magic.TTF');
+  }
+    
+
+  @font-face {
+      font-family: Chilly;
+      src: url('../../../assets/fonts/ChillyMedium.ttf');
+  }
+
+  h2 {
+      font-family: GAU
+  }
+
+  p {
+    font-family: Chilly
+
+  }
+
+  body {
+      background-repeat: repeat;
+      background-color: #000000;
+      /* Set the background color to black */
+      color: #ffffff;
+      font-family: Impact, Charcoal, sans-serif;
+
+  }
+
+  .content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .center-gif-container {
+      position: relative;
+      width: 100%;
+      height: 280px;
+  }
+
+  .center-gif {
+      position: absolute;
+      left: 50%;
+      top: 150px;
+      transform: translate(-50%, -50%);
+      transform-origin: center;
+
+  }
+
+  .inlineImageDiv {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      list-style-type: none;
+
+  }
+
+  .inlineImages {
+      width: 350px;
+      height: 250px;
+      border: 2px solid white;
+      /* Add a border to your image */
+      margin: 0 10px;
+      /* Add 10px margin to the left and right of each image */
+      position: relative;
+      /* Relative positioning for hover description */
+  }
+
+  .imgWrapper {
+      position: relative;
+      display: inline-block;
+  }
+
+  .imgWrapper:hover .imgDescription {
+      display: block;
+  }
+
+  .imgDescription {
+      display: none;
+      position: absolute;
+      bottom: -30px;
+      /* Position the description 30px below the image */
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 255, 255, 0);
+      color: #b4b4b4ce;
+      padding: 5px;
+      border-radius: 5px;
+      white-space: nowrap;
+      /* To prevent wrapping of the description */
+  }
+
+  #meImage {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      /* This will give it a circular shape */
+      border: 2px solid #FFFFFF;
+      /* This adds a white border around the circle, you can adjust as needed */
+  }
+
+  #waveyRibbon {
+      width: 800px;
+      height: 15px;
+  }
+
+  .work-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 40px;
+  }
+
+  .work-description {
+      flex: 1;
+      text-align: left;
+  }
+
+  .work-image {
+      flex: 1;
+      text-align: right;
+  }
+
+  .work-image img {
+      width: 400px;
+      height: auto;
+      margin-right: 40px;
+  }
+
+  .work-image:hover .imgDescription {
+      display: block;
+  }
+        #textDiv {
+            align-self: center;
+            display: inline-block;
+            width: 1200px;
+            background: rgba(255, 255, 255, 0.141);
+            padding: 30px;
+            color: inherit;
+            align-items: center;
+            text-align: center;
+        }
+       
+        

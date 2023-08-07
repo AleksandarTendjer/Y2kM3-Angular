@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <title>Y2KM3</title>
+</head>
+
+<body>
+    <div class="content" id="content">
+        <h2><img src="../../../assets/gifs/email2.gif" /> Email Me <img src="../../../assets/gifs/email2.gif" /></h2>
+
+        <div id="textDiv" style="text-align: center;">
+            <div class="formClass">
+                <div class="gif-border">
+                        <form (ngSubmit)="submitForm()" #emailForm="ngForm">
+                            <label for="name">Name:</label><br>
+                            <input type="text" id="name" name="name" [(ngModel)]="name"><br> 
+                            <label for="email">Email:</label><br>
+                            <input type="email" id="email" name="email" [(ngModel)]="email"><br>
+                            <label for="message">Message:</label><br>
+                            <textarea id="message" name="message" [(ngModel)]="message"></textarea><br>
+                            <button type="submit" class="dos-enter-button">
+                                Send
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="showNotificationFlag" [ngClass]="notificationType">
+                {{ notificationMessage }}
+            </div>
+            <div class="social-media">
+                <h2>Let's connect:</h2>
+                <ul class="social-medial-list">
+                    <li>
+                        <a href="https://www.linkedin.com/in/aleksandar-tendjer-116b04ab/" target="_blank">
+                            <img src="../../../assets/imgs/Linkedin-Logo.png" alt="linkedIn gif">
+                            <span class="social-li-text">LinkedIn</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/AleksandarTendjer" target="_blank">
+                            <img src="../../../assets/imgs/Github-Logo.png" alt="github logo">
+                            <span class="social-li-text">Github</span></a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+</body>
+
+</html>

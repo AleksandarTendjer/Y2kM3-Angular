@@ -1,0 +1,164 @@
+  @font-face {
+      font-family: GAU;
+      src: url('../../../assets/fonts/GAU_pop_magic.TTF');
+  }
+
+  @font-face {
+      font-family: Chilly;
+      src: url('../../../assets/fonts/ChillyMedium.ttf');
+  }
+
+  h2 {
+      font-family: GAU
+  }
+
+  p {
+      font-family: Ubuntu
+  }
+
+  body {
+      background-repeat: repeat;
+      background-color: #000000;
+      color: #b2b2b5;
+      font-family: Impact, Charcoal, sans-serif;
+  }
+
+  .content {
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      display: flex;
+      width: 80%;
+      margin: 0 auto;
+      height: 100vh;
+  }
+
+  .h2 {
+      padding: 20%;
+  }
+
+  body {
+      font-family: Arial, sans-serif;
+  }
+
+  #textDiv {
+      width: 600px;
+  }
+
+  .social-media {
+      margin: 20px 0;
+  }
+
+  .social-medial-list {
+      border-top: #181390;
+      border-top-style: dashed;
+      padding-right: 30%;
+      padding-left: 30%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0;
+      margin: 20px auto;
+      max-width: fit-content;
+
+
+  }
+
+  .social-medial-list li {
+      align-self: center;
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+
+  }
+
+  .social-medial-list li a {
+      display: flex;
+      align-items: center;
+      color: #181390;
+      padding: 8px 16px;
+      text-decoration: none;
+      color: transparent;
+      transition: color 0.3s ease;
+  }
+
+  .social-medial-list img {
+      height: 30px;
+      width: auto;
+  }
+
+  .social-li-text {
+      margin-left: 10px;
+  }
+
+  .social-medial-list li a:hover:not(.active) {
+      background-color: #555;
+      color: white;
+  }
+
+  .formClass {
+      padding-top: 10%;
+      border: 20px solid transparent;
+      background-clip: padding-box;
+  }
+
+  .formClass form {
+      background-image: url('../../../assets/gifs/background.gif');
+  }
+
+
+/* Add the following styles to your existing CSS */
+.gif-border {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    /* Adjust the padding as needed */
+    background-image: url('../../../assets/gifs/linestarRibbon.gif');
+    background-repeat: repeat;
+}
+
+.gif-border form {
+    /* Adjust the padding to give space between the child element and the gif border */
+    padding: 20px;
+    /* Add a background color to ensure the child element's content is visible */
+    background-color: #fff;
+    /* Change the color as per your design */
+}
+
+
+  .dos-enter-button {
+      background-color: #c0c0c0;
+      color: #000;
+      border: 2px solid #808080;
+      border-radius: 5px;
+      padding: 8px 16px;
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+  }
+
+  .dos-enter-button:hover {
+      background-color: #d3d3d3;
+  }
+
+  .dos-enter-button:active {
+      box-shadow: none;
+      background-color: #a9a9a9;
+      transform: translateY(1px);
+  }
+
+  .dos-enter-button:active .arrow {
+      transform: translateY(-50%) translateX(1px);
+  }
+
+  #message {
+      width: 300px;
+      height: 60px;
+
+  }
