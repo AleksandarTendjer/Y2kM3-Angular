@@ -23,7 +23,7 @@ submitForm() {
         message: this.message
     };
     console.log(formData);
-    this.http.post('http://localhost:8080/send_email', formData).subscribe({
+    this.http.post('https://alexscyberspace.azurewebsites.net/send_email', formData).subscribe({
       next:(response:any)=>{           
        this.showNotification(response.message, "success");
       },
