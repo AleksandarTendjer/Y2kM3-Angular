@@ -26,7 +26,7 @@ jobs:
           npm install
           npm run build --if-present
       - name: Zip Artifacts
-        run: zip release.zip ./dist/* -r
+        run: zip release.zip ./dist/client -r
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -56,4 +56,4 @@ jobs:
           app-name: "AlexsCyberspace2002"
           slot-name: "Production"
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8D870ADE45164686AA7FDEC56A0AFD17 }}
-          package: ./dist
+          package: ./dist/client
