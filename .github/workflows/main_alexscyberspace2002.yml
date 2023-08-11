@@ -21,7 +21,7 @@ jobs:
       - name: npm install, build
         run: |
           npm install
-          ng build --prod
+          npm run build
   deploy:
     runs-on: ubuntu-latest
     needs: build
