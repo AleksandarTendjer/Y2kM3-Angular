@@ -3,11 +3,6 @@
       src: url('../../../assets/fonts/GAU_pop_magic.TTF');
   }
 
-  @font-face {
-      font-family: Chilly;
-      src: url('../../../assets/fonts/ChillyMedium.ttf');
-  }
-
   h2 {
       font-family: GAU
   }
@@ -40,11 +35,18 @@
   body {
       font-family: Arial, sans-serif;
   }
+#textDiv {
+    width: 100%;
+    max-width: 600px;
+    /* fallback to 600px width for larger screens */
+}
 
-  #textDiv {
-      width: 600px;
-  }
-
+h2,
+p,
+label {
+    font-size: 1.2em;
+    /* Adjust as necessary */
+}
   .social-media {
       margin: 20px 0;
   }
@@ -161,4 +163,26 @@
       width: 300px;
       height: 60px;
 
+  }
+  @media only screen and (max-width: 768px) {
+      .content {
+          width: 95%;
+      }
+
+      .formClass {
+          padding-top: 5%;
+      }
+
+      .social-medial-list {
+          flex-direction: column;
+          align-items: flex-start;
+      }
+
+      .social-medial-list img {
+          height: 20px;
+      }
+
+      #message {
+          width: 100%;
+      }
   }

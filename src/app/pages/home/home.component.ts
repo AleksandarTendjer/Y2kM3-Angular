@@ -10,22 +10,34 @@ import { BackgroundService } from '../../background.service';
 export class HomeComponent {
   constructor(private bgService: BackgroundService) { }
 
+private alexsInitialTransform: string = 'translate(-50%, -50%)';
+private cyberspaceInitialTransform: string = 'translate(-50%, -50%)';
+
 ngOnInit(): void {
     this.bgService.setBodyBackgroundImage('./assets/gifs/background.gif');
 }
 onEarthGifEnter() {
-    this.translateElement('alexs', '-100', '90');
-    this.translateElement('cyberspace', '140', '-90');
-  }
+  this.translateElement('alexs', '-45', '30', '%');
+  this.translateElement('cyberspace', '70', '-30', '%');
+}
 
-  onEarthGifLeave() {
-    this.translateElement('alexs', '100', '-90');
-    this.translateElement('cyberspace', '-140', '90');
-  }
+onEarthGifLeave() {
+  // Reset to initial state after mouse leaves
+  this.resetElement('alexs');
+  this.resetElement('cyberspace');
+}
 
-  translateElement(elementId: string, translateX: string, translateY: string) {
+  translateElement(elementId: string, translateX: string, translateY: string, unit: string = 'px') {
     const element:HTMLElement = document.getElementById(elementId)??new HTMLElement();
-    element.style.transform += `translate(${translateX}px, ${translateY}px)`;
+    element.style.transform = ` translate(-50%, -50%) translate(${translateX}${unit}, ${translateY}${unit})`;
     
   }
+  resetElement(elementId: string) {
+  const element: HTMLElement = document.getElementById(elementId) ?? new HTMLElement();
+  if (elementId === 'alexs') {
+    element.style.transform = this.alexsInitialTransform;
+  } else if (elementId === 'cyberspace') {
+    element.style.transform = this.cyberspaceInitialTransform;
+  }
+}
 }

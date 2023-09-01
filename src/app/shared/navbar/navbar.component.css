@@ -1,49 +1,80 @@
+
+.nav-toggle {
+    display: none;
+}
   .navbar {
       margin: 0;
       padding: 0;
-      width: 200px;
+      width: 30%;
+      height: auto;
       position: fixed;
       overflow: auto;
       z-index: 9999;
       display: flex;
       flex-direction: column;
+        transition: transform 0.3s ease-in-out;
+            transform: scaleY(0);
+            transform-origin: top;
   }
-
-  .navbar ul {
-      list-style-type: none;
-  }
+.navbar.show {
+    transform: scaleY(1);
+}
 
   .navbar li a {
       display: block;
       color: #181390;
-      padding: 8px 16px;
+        align-items: center;
+        padding: 8px 16px;
       text-decoration: none;
       color: transparent;
       transition: color 0.3s ease;
   }
 
   .navbar img {
-      height: 50px;
-      /* Adjust height as necessary */
+    max-height: 80px;
       width: auto;
       /* Keeps the aspect ratio of the gif */
   }
 
   .nav-text {
-      margin-left: 10px;
-      /* Add some space between the gif and the text */
+      margin-left: 20px;
   }
 
   .navbar li a.active {
       background-color: #4CAF50;
-      color: white;
+      color: rgba(255, 255, 255, 0.144);
   }
 
   .navbar li a:hover:not(.active) {
-      background-color: #555;
-      color: white;
+      background-color: #55555531;
+      color: rgba(255, 255, 255, 0.726);
   }
 
   .nav li:last-child {
       margin-right: 0;
   }
+/* Media queries */
+@media (max-width: 700px) {
+    .navbar img {
+        max-height: 30px;
+        /* More reasonable size */
+    }
+    .nav-text {
+        margin-left: 10px;
+        /* Reduced margin */
+    }
+        .nav-toggle {
+            display: block;
+        }
+    
+        /* Initially hide the navbar */
+        .navbar {
+                transform: scaleY(0);            
+        }
+    
+        /* Style for the shown navbar */
+        .navbar.show {
+            display: flex;
+            transform: scaleY(1);
+        }
+}

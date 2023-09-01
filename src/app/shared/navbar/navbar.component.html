@@ -1,4 +1,7 @@
-<div class="navbar" id="navbar" >
+<button  *ngIf="!navbarVisible" class="nav-toggle" (click)="toggleNavbar()">
+    <img src="../../../assets/gifs/menu4.gif" alt="earth gif" [class.show]="navbarVisible">
+</button>
+<div class="navbar" id="navbar"  [class.show]="navbarVisible">
     <ul>
         <li><a routerLink="/home">
                 <img src="../../../assets/gifs/earth.gif" alt="earth gif">

@@ -10,13 +10,13 @@
   }
 
   h2 {
-      font-family: GAU
+      font-family: GAU;
   }
 
   p {
-    font-family: Chilly
-
-  }
+    font-family: Chilly;
+    font-size: 1rem;
+}
 
   body {
       background-repeat: repeat;
@@ -33,20 +33,6 @@
       flex-direction: column;
       align-items: center;
   }
-  .center-gif-container {
-      position: relative;
-      width: 100%;
-      height: 280px;
-  }
-
-  .center-gif {
-      position: absolute;
-      left: 50%;
-      top: 150px;
-      transform: translate(-50%, -50%);
-      transform-origin: center;
-
-  }
 
   .inlineImageDiv {
       display: flex;
@@ -59,9 +45,7 @@
   .inlineImages {
       width: 350px;
       height: 250px;
-      border: 2px solid white;
       /* Add a border to your image */
-      margin: 0 10px;
       /* Add 10px margin to the left and right of each image */
       position: relative;
       /* Relative positioning for hover description */
@@ -132,15 +116,38 @@
   .work-image:hover .imgDescription {
       display: block;
   }
-        #textDiv {
-            align-self: center;
-            display: inline-block;
-            width: 1200px;
-            background: rgba(255, 255, 255, 0.141);
-            padding: 30px;
-            color: inherit;
-            align-items: center;
-            text-align: center;
-        }
-       
+    #textDiv {
+        align-self: center;
+        display: inline-block;
+        width: 1200px;
+        background: rgba(255, 255, 255, 0.141);
+        padding: 30px;
+        color: inherit;
+        align-items: center;
+        text-align: center;
+    }
+    .intro-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+@media (max-width: 768px) {
+    #textDiv {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .work-section {
+        flex-direction: column;
+    }
         
+    p {
+    font-size: 0.9rem;
+    justify-content: center;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+                    .intro-text {
+                        white-space: normal;
+                    }
+}
