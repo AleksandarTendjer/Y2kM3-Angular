@@ -59,12 +59,22 @@
         max-height: 30px;
         /* More reasonable size */
     }
+        
     .nav-text {
         margin-left: 10px;
         /* Reduced margin */
     }
         .nav-toggle {
             display: block;
+            position: fixed;
+            background: transparent;
+            border: transparent;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            max-width: 10%;
+            max-height: 10%;
+            opacity: 0.9;
         }
     
         /* Initially hide the navbar */
