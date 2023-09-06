@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { environment } from '../../../environments/environment.prod'
 
 @Component({
   selector: 'app-contact',
@@ -23,7 +24,7 @@ submitForm() {
         message: this.message
     };
     console.log(formData);
-    this.http.post('https://alexscyberspace.azurewebsites.net/send_email', formData).subscribe({
+    this.http.post(environment.apiUrl, formData).subscribe({
       next:(response:any)=>{           
        this.showNotification(response.message, "success");
       },
