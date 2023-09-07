@@ -24,7 +24,7 @@ submitForm() {
         message: this.message
     };
     console.log(formData);
-    this.http.post(environment.apiUrl, formData).subscribe({
+    this.http.post(environment.apiUrl+'/send_data', formData).subscribe({
       next:(response:any)=>{           
        this.showNotification(response.message, "success");
       },
