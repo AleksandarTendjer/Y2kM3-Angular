@@ -25,17 +25,16 @@ constructor(private eRef: ElementRef) { }
     }
   }
 
- /*@HostListener('document:click', ['$event'])
-clickout(event: Event) {
-  if (window.innerWidth <= 700) {
-    if (!this.eRef.nativeElement.contains(event.target) && this.navbarVisible) {
+@HostListener('window:scroll', ['$event'])
+  onScroll(event: Event) {
+    if (window.scrollY > 50 && window.innerWidth > 700) {  
       this.navbarVisible = false;
-    }
+    } 
   }
-} */
+
+
 
   toggleNavbar() {
-    console.log("toggled to:"+this.navbarVisible)
     this.navbarVisible = !this.navbarVisible;
   }
 

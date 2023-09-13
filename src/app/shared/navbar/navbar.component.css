@@ -1,6 +1,15 @@
 
 .nav-toggle {
-    display: none;
+        display: block;
+        position: fixed;
+        background: transparent;
+        border: transparent;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+        max-width: 10%;
+        max-height: 10%;
+        opacity: 0.9;
 }
   .navbar {
       margin: 0;
@@ -13,10 +22,11 @@
       display: flex;
       flex-direction: column;
         transition: transform 0.3s ease-in-out;
-            transform: scaleY(0);
-            transform-origin: top;
+        transform: scaleY(0);
+        transform-origin: top;
   }
 .navbar.show {
+    display: flex;
     transform: scaleY(1);
 }
 
