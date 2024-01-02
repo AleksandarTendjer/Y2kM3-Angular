@@ -9,7 +9,6 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
-import { AudioPlayerComponent } from './audio-player/audio-player.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,6 @@ import { AudioPlayerComponent } from './audio-player/audio-player.component';
     ContactComponent,
     AboutMeComponent,
     NavbarComponent,
-    AudioPlayerComponent
   ],
   imports: [
     BrowserModule,
