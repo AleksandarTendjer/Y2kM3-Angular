@@ -1,0 +1,10 @@
+.audio-wrapper {
+    width: 300px;
+    /* Adjust this value according to your preference */
+    margin: 0 auto;
+    /* This centers the audio wrapper horizontally */
+}
+
+audio {
+    width: 100%;
+}

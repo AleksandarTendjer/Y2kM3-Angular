@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { AudioPlayerComponent } from 'src/app/audio-player/audio-player.component';
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AboutMeComponent {
 
+ 
 }
